@@ -37,21 +37,3 @@ if has('multi_byte') && &encoding ==# 'utf-8'
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
-
-" The fish shell is not very compatible to other shells and unexpectedly
-" breaks things that use 'shell'.
-if &shell =~# 'fish$'
-  set shell=/bin/bash
-endif
-
-" Put all temporary files under the same directory.
-" https://github.com/mhinz/vim-galore#temporary-files
-set backup
-set backupdir   =$HOME/.vim/files/backup/
-set backupext   =-vimbackup
-set backupskip  =
-set directory   =$HOME/.vim/files/swap//
-set updatecount =100
-set undofile
-set undodir     =$HOME/.vim/files/undo/
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
