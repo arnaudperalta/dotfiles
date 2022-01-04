@@ -1,0 +1,34 @@
+[user]
+	name = Arnaud PERALTA
+	email = arnaud.peralta@gmail.com
+
+[core]
+  excludefile = ~/dotfiles/git/gitignore
+
+[color]
+	ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
+
+[alias]
+
+    # show list of contributors in descending order by number of commits
+  rank = shortlog -sn --no-merges
+
+    # given any git object, try to show it briefly
+  whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+
+    # Add modified files to previous commit
+  oups = !"git add -A -v && git commit --amend -C HEAD"
+
+[github]
+	user = arnaudperalta

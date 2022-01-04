@@ -1,0 +1,18 @@
+# Install
+# ohmyzsh
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+export ZSH="/home/arnaud/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(
+	git
+	web-search
+)
+
+source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
