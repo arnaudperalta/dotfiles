@@ -1,5 +1,23 @@
-rm -i ~/.zshrc
-ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+#!/bin/bash
 
-rm -i ~/.gitconfig
-ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+insert_config() {
+	if [ -f $3 ]
+	then
+		read -r -p "Do you want to delete $1 ? [Y/n]" response
+		response=${response,,}
+		if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
+			rm $3
+		else
+			printf "\e[93m$1 skipped\e[0m\n"
+		fi
+	fi
+	if [ ! -f $3 ]
+	then
+		ln -s $2 $3
+		printf "\e[32m$1 linked\e[0m\n"
+	fi
+}
+
+insert_config .zshrc ~/dotfiles/zsh/zshrc ~/.zshrc
+insert_config .gitconfig ~/dotfiles/git/gitconfig ~/.gitconfig
+insert_config .tmux.conf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
