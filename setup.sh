@@ -3,7 +3,7 @@
 insert_config() {
 	if [ -f $3 ]
 	then
-		read -r -p "Do you want to delete $1 ? [Y/n]" response
+		read -r -p "Do you want to replace $1 ? [Y/n]" response
 		response=${response,,}
 		if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
 			rm $3
@@ -20,4 +20,6 @@ insert_config() {
 
 insert_config .zshrc ~/dotfiles/zsh/zshrc ~/.zshrc
 insert_config .gitconfig ~/dotfiles/git/gitconfig ~/.gitconfig
+
 insert_config .tmux.conf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+insert_config .tmux.conf.local ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
