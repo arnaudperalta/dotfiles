@@ -4,9 +4,16 @@
 
 [core]
   excludefile = ~/dotfiles/git/gitignore
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 	ui = true
+
+[color "highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [color "branch"]
   current = yellow reverse
@@ -14,7 +21,7 @@
   remote = green
 
 [color "diff"]
-  meta = yellow bold
+  meta = 11
   frag = magenta bold
   old = red
   new = green
@@ -32,3 +39,6 @@
 
 [github]
 	user = arnaudperalta
+
+[interactive]
+  diffFilter = diff-so-fancy --patch

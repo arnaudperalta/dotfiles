@@ -1,0 +1,5 @@
+nnoremap <C-space> a
+imap <C-space> <Esc>
+inoremap <silent> <Up> <ESC><Up>
+inoremap <silent> <Down> <ESC><Down>
+
