@@ -7,6 +7,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'josa42/vim-lightline-coc'
 call plug#end()
 
+nmap <space>e <Cmd>CocCommand explorer<CR>
+
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
