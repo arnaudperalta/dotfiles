@@ -1,4 +1,16 @@
+set nocompatible
 nnoremap <C-space> a
 imap <C-space> <Esc>
 inoremap <silent> <Up> <ESC><Up>
 inoremap <silent> <Down> <ESC><Down>
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set mouse=a
+" ctrl+s to save
+nnoremap <c-s> :w<CR> # normal mode: save
+inoremap <c-s> <Esc>:w<CR>l # insert mode: escape to normal and save
+vnoremap <c-s> <Esc>:w<CR> # visual mode: escape to normal and save
+"ctrl+q to quit all
+map <C-Q> :qa<CR>

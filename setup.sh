@@ -26,3 +26,6 @@ insert_config .tmux.conf.local ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.loca
 
 insert_config .vimrc ~/dotfiles/nvim/vimrc ~/.vimrc
 insert_config init.vim ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+insert_config coc-settings.json ~/dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+mkdir ~/.config/nvim/colors
+insert_config molokai.vim ~/dotfiles/nvim/colors/molokai.vim ~/.config/nvim/colors/molokai.vim
