@@ -9,8 +9,8 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 " ctrl+s to save
-nnoremap <c-s> :w<CR> # normal mode: save
-inoremap <c-s> <Esc>:w<CR>l # insert mode: escape to normal and save
-vnoremap <c-s> <Esc>:w<CR> # visual mode: escape to normal and save
+nnoremap <c-s> :w<CR> 
+inoremap <c-s> <Esc>:w<CR>l
+vnoremap <c-s> <Esc>:w<CR>
 "ctrl+q to quit all
 map <C-Q> :qa<CR>
