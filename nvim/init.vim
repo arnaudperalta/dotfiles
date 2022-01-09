@@ -8,6 +8,7 @@ Plug 'josa42/vim-lightline-coc'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 set encoding=UTF-8
 nmap <space>e <Cmd>CocCommand explorer<CR>
@@ -67,5 +68,10 @@ nnoremap <silent> <Space>bw :BufferOrderByWindowNumber<CR>
 " Other:
 " :BarbarEnable - enables barbar (enabled by default)
 " :BarbarDisable - very bad command, should never be used
+
+set background=dark
+set termguicolors
+let g:tokyonight_style = "night"
+colorscheme tokyonight
 
 source ~/.vimrc

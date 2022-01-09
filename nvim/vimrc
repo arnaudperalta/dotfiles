@@ -1,8 +1,7 @@
 set nocompatible
+syntax enable
 nnoremap <C-space> a
 imap <C-space> <Esc>
-inoremap <silent> <Up> <ESC><Up>
-inoremap <silent> <Down> <ESC><Down>
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
@@ -14,3 +13,10 @@ inoremap <c-s> <Esc>:w<CR>l
 vnoremap <c-s> <Esc>:w<CR>
 "ctrl+q to quit all
 map <C-Q> :qa<CR>
+colorscheme tokyonight
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
