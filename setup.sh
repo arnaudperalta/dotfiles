@@ -20,6 +20,7 @@ insert_config() {
 
 mkdir -p ~/.config/nvim/colors
 insert_config .zshrc ~/dotfiles/zsh/zshrc ~/.zshrc
+npm i -g diff-so-fancy
 insert_config .gitconfig ~/dotfiles/git/gitconfig ~/.gitconfig
 
 insert_config .tmux.conf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
