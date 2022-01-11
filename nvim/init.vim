@@ -9,6 +9,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 set encoding=UTF-8
 nmap <space>e <Cmd>CocCommand explorer<CR>

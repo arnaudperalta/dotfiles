@@ -2,7 +2,7 @@
 # ohmyzsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-export ZSH="/home/arnaud/.oh-my-zsh"
+export ZSH="/home/peralarn/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -17,6 +17,8 @@ plugins=(
 alias vim="nvim"
 alias vi="nvim"
 alias lzd="lazydocker"
+alias msbr="mvn spring-boot:run"
+alias mci="mvn clean install"
 
 # enable control-s and control-q
 stty start undef
