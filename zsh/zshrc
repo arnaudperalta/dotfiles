@@ -19,6 +19,7 @@ alias vi="nvim"
 alias lzd="lazydocker"
 alias msbr="mvn spring-boot:run"
 alias mci="mvn clean install"
+alias gdh="git diff HEAD"
 
 # enable control-s and control-q
 stty start undef
