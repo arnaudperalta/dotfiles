@@ -429,5 +429,10 @@ bind -n M-j resize-pane -D 5
 bind -n M-h resize-pane -L 5
 bind -n M-l resize-pane -R 5
 
+bind-key -n C-t new-window
+bind-key -n C-w kill-window
+bind-key -n C-l next-window
+bind-key -n C-h previous-window
+
 set -g default-terminal "screen-256color"
 set -ga terminal-overrides ",*256col*:Tc"
