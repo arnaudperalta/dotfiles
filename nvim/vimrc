@@ -1,7 +1,5 @@
 set nocompatible
 syntax enable
-nnoremap <C-space> a
-imap <C-space> <Esc>
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
@@ -12,8 +10,14 @@ set number
 nnoremap <c-s> :w<CR> 
 inoremap <c-s> <Esc>:w<CR>l
 vnoremap <c-s> <Esc>:w<CR>
+
 "ctrl+q to quit all
 map <C-Q> :qa<CR>
+
+"jk or kj to escape
+inoremap jk <esc>
+inoremap kj <esc>
+
 colorscheme tokyonight
 
 if exists('+termguicolors')
