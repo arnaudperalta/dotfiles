@@ -14,9 +14,7 @@ vnoremap <c-s> <Esc>:w<CR>
 "ctrl+q to quit all
 map <C-Q> :qa<CR>
 
-"jk or kj to escape
-inoremap jk <esc>
-inoremap kj <esc>
+inoremap jj <esc>
 
 colorscheme tokyonight
 
