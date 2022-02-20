@@ -1,0 +1,6 @@
+set showmode
+set clipboard+=unnamed
+
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
