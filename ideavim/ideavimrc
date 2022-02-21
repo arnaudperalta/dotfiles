@@ -1,6 +1,20 @@
+" General settings
 set showmode
 set clipboard+=unnamed
+set NERDTree
 
-nnoremap \e :e ~/.ideavimrc<CR>
-nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
+" Keybinds
+
+" Save on Ctrl+s
+nnoremap <c-s> :w<CR>
+" Exit insert on save
+inoremap <c-s> <Esc>:w<CR>l
+" Exit visual on save
+vnoremap <c-s> <Esc>:w<CR>
+" Redo with U instead of Ctrl+R
+noremap U <C-R>
+" Tab to indent in normal mode
+nmap <Tab> a<C-t><Esc>
+" Shift+Tab to unindent in normal mode
+nmap <S-Tab> a<C-d><Esc>

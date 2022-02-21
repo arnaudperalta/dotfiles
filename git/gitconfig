@@ -4,7 +4,6 @@
 
 [core]
   excludefile = ~/dotfiles/git/gitignore
-  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 	ui = true
@@ -39,6 +38,3 @@
 
 [github]
 	user = arnaudperalta
-
-[interactive]
-  diffFilter = diff-so-fancy --patch
