@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set number
+set gdefault
 " ctrl+s to save
 nnoremap <c-s> :w<CR> 
 inoremap <c-s> <Esc>:w<CR>l
@@ -14,7 +15,12 @@ vnoremap <c-s> <Esc>:w<CR>
 "ctrl+q to quit all
 map <C-Q> :qa<CR>
 
-inoremap jj <esc>
+nnoremap <TAB> >>
+nnoremap <S-TAB> <<
+vnoremap <TAB> >gv
+vnoremap <S-TAB> <gv
+nnoremap <A-v> <c-v>
+nmap s :%s/
 
 colorscheme tokyonight
 
