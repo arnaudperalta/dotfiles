@@ -50,3 +50,6 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
   exec 'inoremap' key '<Nop>'
   exec 'cnoremap' key '<Nop>'
 endfor
+
+" Upload visual selection to ix.io
+vnoremap <Leader>u :w !curl -F "f:1=<-" ix.io<CR>
