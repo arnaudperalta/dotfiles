@@ -4,6 +4,7 @@
 
 [core]
   excludefile = ~/dotfiles/git/gitignore
+	autocrlf = input
 
 [color]
 	ui = true

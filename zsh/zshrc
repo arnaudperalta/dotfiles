@@ -19,6 +19,7 @@ alias vi="nvim"
 alias lzd="lazydocker"
 alias msbr="mvn spring-boot:run"
 alias mci="mvn clean install"
+alias mcis="mvn clean install -DskipTests"
 alias gdh="git diff HEAD"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
@@ -30,3 +31,7 @@ stty stop undef
 setopt noflowcontrol
 
 source $ZSH/oh-my-zsh.sh
+
+if service docker status 2>&1 | grep -q "is not running"; then
+    wsl.exe -d "${WSL_DISTRO_NAME}" -u root -e /usr/sbin/service docker start >/dev/null 2>&1
+fi
