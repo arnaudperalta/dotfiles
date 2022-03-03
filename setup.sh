@@ -30,3 +30,7 @@ insert_config init.vim ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 insert_config coc-settings.json ~/dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 insert_config .ideavimrc ~/dotfiles/ideavim/ideavimrc ~/.ideavimrc
 
+insert_config imwheel.service ~/dotfiles/imwheel/imwheel.service ~/.config/systemd/user/imwheel.service
+insert_config .imwheelrc ~/dotfiles/imwheel/imwheelrc ~/.imwheelrc
+
+insert_config .alacritty.yml ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
