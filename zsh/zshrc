@@ -24,6 +24,7 @@ alias gdh="git diff HEAD"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias ix="curl -F 'f:1=<-' ix.io"
+alias lg="lazygit"
 
 # enable control-s and control-q
 stty start undef
