@@ -39,3 +39,12 @@
 
 [github]
 	user = arnaudperalta
+
+[rerere]
+    enabled = true
+
+[rebase]
+    autoStash = true
+
+[pull]
+    rebase = false
