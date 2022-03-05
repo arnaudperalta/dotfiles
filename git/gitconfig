@@ -1,44 +1,44 @@
 [user]
-	name = Arnaud PERALTA
-	email = arnaud.peralta@gmail.com
+    name = Arnaud PERALTA
+    email = arnaud.peralta@gmail.com
 
 [core]
-  excludefile = ~/dotfiles/git/gitignore
-	autocrlf = input
+    excludefile = ~/dotfiles/git/gitignore
+    autocrlf = input
 
 [color]
-	ui = true
+    ui = true
 
 [color "highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-  meta = 11
-  frag = magenta bold
-  old = red
-  new = green
+    meta = 11
+    frag = magenta bold
+    old = red
+    new = green
 
 [alias]
 
     # show list of contributors in descending order by number of commits
-  rank = shortlog -sn --no-merges
+    rank = shortlog -sn --no-merges
 
     # given any git object, try to show it briefly
-  whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
 
     # Add modified files to previous commit
-  oups = !"git add -A -v && git commit --amend -C HEAD"
+    oups = !"git add -A -v && git commit --amend -C HEAD"
 
 [github]
-	user = arnaudperalta
+    user = arnaudperalta
 
 [rerere]
     enabled = true
