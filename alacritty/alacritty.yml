@@ -68,3 +68,10 @@ cursor:
   style: Beam
 
 live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
