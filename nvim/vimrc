@@ -53,3 +53,6 @@ endfor
 
 " Upload visual selection to ix.io
 vnoremap <Leader>u :w !curl -F "f:1=<-" ix.io<CR>
+
+set t_fd=
+set t_fe=
