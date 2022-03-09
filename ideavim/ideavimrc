@@ -1,10 +1,10 @@
+source ~/.vimrc
 " General settings
 set showmode
 set clipboard+=unnamed
 set NERDTree
+set ideajoin
 
-
-" Keybinds
 
 " Save on Ctrl+s
 nnoremap <c-s> :w<CR>
@@ -12,8 +12,3 @@ nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>l
 " Exit visual on save
 vnoremap <c-s> <Esc>:w<CR>
-" Indent
-nnoremap <TAB> >>
-nnoremap <S-TAB> <<
-vnoremap <TAB> >gv
-vnoremap <S-TAB> <gv

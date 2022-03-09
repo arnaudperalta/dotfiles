@@ -3,14 +3,28 @@ window:
     columns: 120
     lines: 30
 
+  decorations: full
+
+  dynamic_title: true
   padding:
     x: 5
     y: 1
 
-  decorations: full
+font:
+  normal:
+    family: monospace
+    style: Regular
 
-  dynamic_title: true
+  bold:
+    family: monospace
+    style: Bold
 
+  italic:
+    family: monospace
+    style: Italic
+
+  # font size
+  size: 10
 
 scrolling:
   history: 9000

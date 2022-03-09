@@ -1,4 +1,4 @@
-set $mod Mod4
+set $mod Mod1
 font pango:DejaVu Sans Mono 10
 set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod

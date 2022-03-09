@@ -10,9 +10,11 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'projekt0n/github-nvim-theme'
+Plug 'weirongxu/coc-explorer'
 call plug#end()
 set encoding=UTF-8
 nmap <space>e <Cmd>CocCommand explorer<CR>
+nmap <space>f :FZF<CR>
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
