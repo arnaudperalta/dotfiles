@@ -1,3 +1,4 @@
+" CocInstall for coc plugins
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -10,11 +11,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'projekt0n/github-nvim-theme'
-Plug 'weirongxu/coc-explorer'
 call plug#end()
 set encoding=UTF-8
 nmap <space>e <Cmd>CocCommand explorer<CR>
-nmap <space>f :FZF<CR>
+nmap <space>f :GFiles<CR>
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
@@ -76,5 +76,6 @@ set background=dark
 set termguicolors
 let g:tokyonight_style = "night"
 colorscheme tokyonight
+hi Normal ctermbg=NONE guibg=NONE
 
 source ~/.vimrc
