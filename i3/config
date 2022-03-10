@@ -2,6 +2,7 @@ set $mod Mod1
 font pango:DejaVu Sans Mono 10
 set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
+focus_follows_mouse no
 
 # Startup execs
 exec --no-startup-id dex --autostart --environment i3

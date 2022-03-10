@@ -36,3 +36,4 @@ insert_config .imwheelrc ~/dotfiles/imwheel/imwheelrc ~/.imwheelrc
 insert_config .alacritty.yml ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
 
 insert_config config ~/dotfiles/i3/config ~/.config/i3/config
+insert_config wslconfig ~/dotfiles/i3/wslconfig ~/.config/i3/config

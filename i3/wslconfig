@@ -2,6 +2,7 @@ set $mod Mod1
 font pango:DejaVu Sans Mono 10
 set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
+focus_follows_mouse no
 
 # Startup execs
 exec --no-startup-id dex --autostart --environment i3
@@ -131,25 +132,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Print exec spectacle
-
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-  verbose yes
-  status_command python3 ~/dotfiles/i3/status.py
-  separator_symbol " / "
-  colors {
-    background #24272e
-    statusline #abb2bf
-
-    focused_workspace  #73b2e6 #282c34
-    active_workspace   #eeeeee #333333
-    inactive_workspace #888888 #282c34
-    urgent_workspace   #ffffff #e06c75
-  }
-}
-
 
 # Appearance
 client.focused          #4b68ad #24272e #73b2e6 #282c34   #4b68ad
