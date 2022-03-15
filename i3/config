@@ -131,23 +131,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Print exec spectacle
+bindsym --release Print exec spectacle
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
   verbose yes
   status_command python3 ~/dotfiles/i3/status.py
   separator_symbol " / "
   colors {
-    background #24272e
-    statusline #abb2bf
+    background #3c3836
+    statusline #ebdbb2
+    separator #666666
 
-    focused_workspace  #73b2e6 #282c34
-    active_workspace   #eeeeee #333333
-    inactive_workspace #888888 #282c34
-    urgent_workspace   #ffffff #e06c75
+    focused_workspace  #458588 #458588 #ebdbb2
+    active_workspace   #83a598 #83a598 #ebdbb2
+    inactive_workspace #504945 #504945 #ebdbb2
+    urgent_workspace   #cc241d #cc241d #504945
   }
 }
 
