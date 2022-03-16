@@ -424,10 +424,10 @@ bind '\' split-window -h
 bind - split-window -v
 setw -g mouse on
 
-bind -n M-k resize-pane -U 5
-bind -n M-j resize-pane -D 5
-bind -n M-h resize-pane -L 5
-bind -n M-l resize-pane -R 5
+bind -n C-Up resize-pane -U 5
+bind -n C-Down resize-pane -D 5
+bind -n C-Left resize-pane -L 5
+bind -n C-Right resize-pane -R 5
 
 bind-key -n C-t new-window
 bind-key -n C-w kill-window

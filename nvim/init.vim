@@ -12,6 +12,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 call plug#end()
 set encoding=UTF-8
+set clipboard+=unnamedplus
 nmap <space>e <Cmd>CocCommand explorer<CR>
 nnoremap <space>f :Files<CR>
 nmap <space>g :GFiles<CR>
