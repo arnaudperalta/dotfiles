@@ -12,6 +12,7 @@ exec --no-startup-id imwheel
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 exec_always --no-startup-id xinput set-prop 9 155 0.6 0 0 0 0.6 0 0 0 1
+exec_always --no-startup-id setxkbmap -option compose:ralt
 
 # Binds
 bindsym XF86AudioPlay exec playerctl play-pause
