@@ -37,4 +37,7 @@ set termguicolors
 colorscheme gruvbox
 hi Normal ctermbg=NONE guibg=NONE
 
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+
 source ~/.vimrc
