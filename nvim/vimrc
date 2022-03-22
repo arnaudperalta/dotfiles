@@ -28,13 +28,9 @@ nnoremap <A-v> <c-v>
 " Substitute
 nmap s :%s/
 
-" File navigation
+" Goto begin or end of line
 nnoremap H ^
 nnoremap L $
-
-" Goto begin or end of line
-nnoremap K <C-u>
-nnoremap J <C-d>
 
 " Move line
 nnoremap <C-j> :m .+1<CR>==
