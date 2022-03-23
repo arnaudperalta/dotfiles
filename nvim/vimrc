@@ -15,8 +15,11 @@ nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>l
 vnoremap <c-s> <Esc>:w<CR>
 
-" Ctrl+q to quit Vim
-map <C-Q> :qa<CR>
+" Ctrl+q to quit tab
+map <C-Q> :q<CR>
+
+" Ctrl+` to quit + override
+map <C-A> :qa!<CR>
 
 " Indentation
 nnoremap <TAB> >>
