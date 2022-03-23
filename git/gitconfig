@@ -48,3 +48,8 @@
 
 [pull]
     rebase = false
+
+[merge]
+    summary = true
+    verbosity = 1
+    tool = meld
