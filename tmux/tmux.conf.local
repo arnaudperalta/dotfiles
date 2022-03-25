@@ -417,11 +417,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 # "$@"
 # # /!\ do not remove the previous line
 
-unbind C-b
-set -g prefix `
-bind-key ` send-prefix
-bind '\' split-window -h
-bind - split-window -v
+bind-key -n C-'\' split-window -h
+bind-key -n M-'\' split-window -v
 setw -g mouse on
 
 bind -n C-Up resize-pane -U 5
