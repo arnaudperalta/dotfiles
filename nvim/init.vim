@@ -1,7 +1,5 @@
 " CocInstall for coc plugins
 call plug#begin()
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -10,12 +8,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
-nmap <space>e <Cmd>CocCommand explorer<CR>
-nnoremap <space>f :Files<CR>
-nmap <space>g :GFiles<CR>
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
@@ -37,7 +35,18 @@ set termguicolors
 colorscheme gruvbox
 hi Normal ctermbg=NONE guibg=NONE
 
+" barbar
 nnoremap <silent>    <A-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-.> :BufferNext<CR>
+
+" coc
+nmap <Leader>e <Cmd>CocCommand explorer<CR>
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+" ripgrep dependency
+nnoremap <leader>fg <cmd>Telescope live_grep<cr> 
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 source ~/.vimrc

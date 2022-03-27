@@ -8,11 +8,15 @@ set expandtab
 set mouse=a
 set number
 set gdefault
+set shortmess+=A
 
 " --- Remaps
+" Leader key
+map <space> <leader>
+
 " Ctrl+s to save
 nnoremap <c-s> :w<CR> 
-inoremap <c-s> <Esc>:w<CR>l
+inoremap <c-s> <Esc>:w<CR>
 vnoremap <c-s> <Esc>:w<CR>
 
 " Ctrl+q to quit tab
