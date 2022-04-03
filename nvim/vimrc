@@ -9,6 +9,7 @@ set mouse=a
 set number
 set gdefault
 set shortmess+=A
+set autoindent
 
 " --- Remaps
 " Leader key

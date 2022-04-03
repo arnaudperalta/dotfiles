@@ -11,12 +11,17 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
-
+set noshowmode
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
+
+let g:indentLine_char = '│'
+let g:indentLine_leadingSpaceEnable = 1
+let g:indentLine_leadingSpaceChar = "."
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
