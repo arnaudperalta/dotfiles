@@ -4,15 +4,6 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 focus_follows_mouse no
 
-# Startup execs
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id imwheel
-exec --no-startup-id setxkbmap -option compose:caps
-exec --no-startup-id xmodmap -e "clear lock"
-exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
-
 # Binds
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
