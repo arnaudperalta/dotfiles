@@ -2,5 +2,5 @@
 sudo genie -c systemctl start docker
 sudo chmod 777 /var/run/docker.sock
 cd ~/.
-i3 &! > /dev/null
+sh -c "i3 > /dev/null &" &
 setxkbmap -option "compose:ralt"

@@ -7,7 +7,7 @@ focus_follows_mouse no
 # Binds
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -show-icons -font "DejaVu Sans 10"
 
 # change focus
 bindsym $mod+h focus left
