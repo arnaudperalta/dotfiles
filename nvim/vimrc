@@ -21,7 +21,7 @@ inoremap <c-s> <Esc>:w<CR>
 vnoremap <c-s> <Esc>:w<CR>
 
 " Ctrl+q to quit tab
-map <C-Q> :q<CR>
+map <C-Q> :bd<CR>
 
 " Ctrl+` to quit + override
 map <C-A> :qa!<CR>
