@@ -12,6 +12,7 @@ Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'Yggdroot/indentLine'
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -22,6 +23,11 @@ let &packpath=&runtimepath
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
 let g:indentLine_leadingSpaceChar = "."
+
+let g:coc_global_extensions = [
+            \ 'coc-explorer',
+            \ 'coc-rust-analyzer',
+]
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
