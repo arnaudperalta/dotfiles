@@ -432,7 +432,7 @@ bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 
 bind-key -n C-t new-window
-bind-key -n C-w kill-window
+bind-key -n M-w kill-window
 bind-key -n C-l next-window
 bind-key -n C-h previous-window
 
