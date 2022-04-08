@@ -23,11 +23,12 @@ let &packpath=&runtimepath
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
 let g:indentLine_leadingSpaceChar = "."
+let g:blamer_enabled = 1
 
 let g:coc_global_extensions = [
             \ 'coc-explorer',
-            \ 'coc-rust-analyzer',
-]
+            \ 'coc-rust-analyzer'
+\ ]
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
