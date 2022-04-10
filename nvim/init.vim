@@ -13,6 +13,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'APZelos/blamer.nvim'
+Plug 'kdheepak/lazygit.nvim'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -26,9 +27,13 @@ let g:indentLine_leadingSpaceChar = "."
 let g:blamer_enabled = 1
 
 let g:coc_global_extensions = [
-            \ 'coc-explorer',
-            \ 'coc-rust-analyzer'
+    \ 'coc-explorer',
+    \ 'coc-rust-analyzer'
 \ ]
+
+let g:copilot_filetypes = {
+        \ 'rs': v:false,
+\ }
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -64,5 +69,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" lazygit
+nnoremap <silent> <leader>gg :LazyGit<CR>
 
 source ~/.vimrc
