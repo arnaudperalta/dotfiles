@@ -1,0 +1,81 @@
+" --- General settings
+set nocompatible
+syntax enable
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set mouse=a
+set number
+set gdefault
+set shortmess+=A
+
+" --- Remaps
+" Leader key
+map <space> <leader>
+
+" Ctrl+s to save
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>
+vnoremap <c-s> <Esc>:w<CR>
+
+" Ctrl+q to quit tab
+map <C-Q> :q<CR>
+
+" Ctrl+` to quit + override
+map <C-A> :qa!<CR>
+
+" Indentation
+nnoremap <TAB> >>
+nnoremap <S-TAB> <<
+vnoremap <TAB> >gv
+vnoremap <S-TAB> <gv
+nnoremap <A-v> <c-v>
+
+" Substitute
+nmap s :%s/
+
+" Goto begin or end of line
+nnoremap H ^
+nnoremap L $
+
+" Move line
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Ignore F1 help
+nmap <F1> <nop>
+
+" Vim hardmode !
+for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+  exec 'noremap' key '<Nop>'
+  exec 'inoremap' key '<Nop>'
+  exec 'cnoremap' key '<Nop>'
+endfor
+
+" Upload visual selection to ix.io
+vnoremap <Leader>u :w !curl -F "f:1=<-" ix.io<CR>
+
+set t_fd=
+set t_fe=
+
+" VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC VIMRC
+" General settings
+set showmode
+set clipboard+=unnamed
+set NERDTree
+set ideajoin
+set surround
+
+" Save on Ctrl+s
+nnoremap <c-s> :w<CR>
+" Exit insert on save
+inoremap <c-s> <Esc>:w<CR>l
+" Exit visual on save
+vnoremap <c-s> <Esc>:w<CR>
+
+

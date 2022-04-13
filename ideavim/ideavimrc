@@ -1,10 +1,11 @@
 source ~/.vimrc
+
 " General settings
 set showmode
 set clipboard+=unnamed
 set NERDTree
 set ideajoin
-
+set surround
 
 " Save on Ctrl+s
 nnoremap <c-s> :w<CR>
