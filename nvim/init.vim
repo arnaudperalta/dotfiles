@@ -24,6 +24,7 @@ let &packpath=&runtimepath
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
 let g:indentLine_leadingSpaceChar = "."
+let g:indentLine_setConceal = 0
 let g:blamer_enabled = 1
 
 let g:coc_global_extensions = [
