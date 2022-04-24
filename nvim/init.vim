@@ -14,6 +14,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'APZelos/blamer.nvim'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus

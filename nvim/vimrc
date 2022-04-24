@@ -11,6 +11,7 @@ set gdefault
 set shortmess+=A
 set autoindent
 set cc=100
+set backspace=indent,eol,start
 
 " --- Remaps
 " Leader key
