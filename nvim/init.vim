@@ -75,4 +75,6 @@ nmap <silent> gr <Plug>(coc-references)
 " lazygit
 nnoremap <silent> <leader>gg :LazyGit<CR>
 
+nnoremap <silent> <leader>pf :CocCommand prettier.formatFile<CR>
+
 source ~/.vimrc

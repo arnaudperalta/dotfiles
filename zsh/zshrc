@@ -1,7 +1,5 @@
-# Install
-# ohmyzsh
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+export PYTHON_HOST_PROG='/usr/sbin/python'
+export PYTHON3_HOST_PROG='/usr/sbin/python3'
 export ZSH="$HOME/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
