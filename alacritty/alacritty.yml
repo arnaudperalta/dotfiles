@@ -24,7 +24,7 @@ font:
     style: Italic
 
   # font size
-  size: 11
+  size: 10
 
 scrolling:
   history: 9000

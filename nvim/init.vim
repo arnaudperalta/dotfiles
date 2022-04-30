@@ -17,6 +17,7 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'psliwka/vim-smoothie'
 Plug 'puremourning/vimspector'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -39,6 +40,32 @@ let g:coc_global_extensions = [
 
 let g:copilot_filetypes = {
         \ 'rs': v:false,
+\ }
+
+" Java Debugger
+let g:vimspector_adapters = {
+            \ "java-debug-server": {
+                \ "name": "vscode-java",
+                \ "port": "${AdapterPort}"
+            \ }
+\ }
+
+let g:vimspector_configurations = {
+            \ "Java Attach": {
+                \ "default": "true",
+                \ "adapter": "java-debug-server",
+                \ "configuration": {
+                    \ "request": "attach",
+                    \ "host": "127.0.0.1",
+                    \ "port": "5005"
+                \ },
+                \ "breakpoints": {
+                    \ "exception": {
+                        \ "caught": "N",
+                        \ "uncaught": "N"
+                    \ }
+                \ }
+            \ }
 \ }
 
 " use <tab> for trigger completion and navigate to the next complete item
@@ -83,6 +110,7 @@ nnoremap <silent> <leader>pf :CocCommand prettier.formatFile<CR>
 
 nmap <F1> :CocCommand java.debug.vimspector.start<CR>
 nmap <F2> <Plug>VimspectorToggleBreakpoint
+nmap <F3> <Plug>VimspectorContinue
 
 "Startup exec
 autocmd User CocNvimInit :CocCommand explorer --position right --no-focus
