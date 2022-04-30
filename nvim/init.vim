@@ -15,6 +15,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'APZelos/blamer.nvim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'easymotion/vim-easymotion'
+Plug 'psliwka/vim-smoothie'
+Plug 'puremourning/vimspector'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -30,7 +32,9 @@ let g:blamer_enabled = 1
 
 let g:coc_global_extensions = [
     \ 'coc-explorer',
-    \ 'coc-rust-analyzer'
+    \ 'coc-rust-analyzer',
+    \ 'coc-java',
+    \ 'coc-java-debug'
 \ ]
 
 let g:copilot_filetypes = {
@@ -59,14 +63,14 @@ nnoremap <silent>    <A-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-.> :BufferNext<CR>
 
 " coc
-nmap <Leader>e <Cmd>CocCommand explorer<CR>
+nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
 
 " telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <space>ff <cmd>Telescope find_files<cr>
 " ripgrep dependency
-nnoremap <leader>fg <cmd>Telescope live_grep<cr> 
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <space>fb <cmd>Telescope buffers<cr>
+nnoremap <space>fg <cmd>Telescope live_grep<cr> 
+nnoremap <space>fh <cmd>Telescope help_tags<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
@@ -76,5 +80,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> <leader>gg :LazyGit<CR>
 
 nnoremap <silent> <leader>pf :CocCommand prettier.formatFile<CR>
+
+nmap <F1> :CocCommand java.debug.vimspector.start<CR>
+nmap <F2> <Plug>VimspectorToggleBreakpoint
+
+"Startup exec
+autocmd User CocNvimInit :CocCommand explorer --position right --no-focus
 
 source ~/.vimrc

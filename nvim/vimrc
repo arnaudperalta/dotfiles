@@ -14,9 +14,6 @@ set cc=100
 set backspace=indent,eol,start
 
 " --- Remaps
-" Leader key
-map <space> <leader>
-
 " Ctrl+s to save
 nnoremap <c-s> :w<CR> 
 inoremap <c-s> <Esc>:w<CR>
@@ -25,8 +22,9 @@ vnoremap <c-s> <Esc>:w<CR>
 " Ctrl+q to quit tab
 map <C-Q> :bd<CR>
 
-" Ctrl+` to quit + override
-map <C-A> :qa!<CR>
+noremap <space>qQ :qa!<CR>
+nnoremap <space>qq :qa<CR>
+nnoremap q :q<CR>
 
 " Indentation
 nnoremap <TAB> >>
@@ -66,9 +64,6 @@ endfunction
 inoremap <expr> {<Enter> <SID>CloseBracket()
 inoremap <expr> [<Enter> <SID>CloseSBracket()
 inoremap <expr> (<Enter> <SID>ClosePar()
-
-" Ignore F1 help
-nmap <F1> <nop>
 
 " Vim hardmode !
 for key in ['<Up>', '<Down>', '<Left>', '<Right>']
