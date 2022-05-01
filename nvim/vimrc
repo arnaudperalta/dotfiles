@@ -51,6 +51,9 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 "Split buffers
 nnoremap <space>s :vsp<CR>
 
+"Remove hightlights
+nnoremap <space>h :noh<CR>
+
 "auto close {
 function! s:CloseBracket()
     return "{\<Enter>}\<Esc>O"
