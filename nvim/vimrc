@@ -48,6 +48,9 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+"Split buffers
+nnoremap <space>s :vsp<CR>
+
 "auto close {
 function! s:CloseBracket()
     return "{\<Enter>}\<Esc>O"
@@ -73,7 +76,7 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
 endfor
 
 " Upload visual selection to ix.io
-vnoremap <Leader>u :w !curl -F "f:1=<-" ix.io<CR>
+vnoremap <space>u :w !curl -F "f:1=<-" ix.io<CR>
 
 set t_fd=
 set t_fe=

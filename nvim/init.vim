@@ -18,6 +18,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'psliwka/vim-smoothie'
 Plug 'puremourning/vimspector'
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -86,8 +87,8 @@ colorscheme gruvbox
 hi Normal ctermbg=NONE guibg=NONE
 
 " barbar
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
+nnoremap <silent>    <A-h> :BufferPrevious<CR>
+nnoremap <silent>    <A-l> :BufferNext<CR>
 
 " coc
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
@@ -104,9 +105,9 @@ nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " lazygit
-nnoremap <silent> <leader>gg :LazyGit<CR>
+nnoremap <silent> <space>gg :LazyGit<CR>
 
-nnoremap <silent> <leader>pf :CocCommand prettier.formatFile<CR>
+nnoremap <silent> <space>pf :CocCommand prettier.formatFile<CR>
 
 nmap <F1> :CocCommand java.debug.vimspector.start<CR>
 nmap <F2> <Plug>VimspectorToggleBreakpoint
