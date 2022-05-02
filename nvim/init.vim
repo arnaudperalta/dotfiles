@@ -19,12 +19,17 @@ Plug 'psliwka/vim-smoothie'
 Plug 'puremourning/vimspector'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
+Plug 'numToStr/Comment.nvim'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
 set noshowmode
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
+
+lua << EOF
+require('Comment').setup()
+EOF
 
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
@@ -35,6 +40,7 @@ let g:blamer_enabled = 1
 let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-rust-analyzer',
+    \ 'coc-phpls',
     \ 'coc-java',
     \ 'coc-java-debug'
 \ ]
@@ -107,11 +113,17 @@ nmap <silent> gr <Plug>(coc-references)
 " lazygit
 nnoremap <silent> <space>gg :LazyGit<CR>
 
+" Prettier
 nnoremap <silent> <space>pf :CocCommand prettier.formatFile<CR>
 
+" Vimspector
 nmap <F1> :CocCommand java.debug.vimspector.start<CR>
 nmap <F2> <Plug>VimspectorToggleBreakpoint
 nmap <F3> <Plug>VimspectorContinue
+
+" Easymotion
+map <space>d <Plug>(easymotion-bd-f)
+nmap <space>d <Plug>(easymotion-overwin-f)
 
 "Startup exec
 autocmd User CocNvimInit :CocCommand explorer --position right --no-focus
