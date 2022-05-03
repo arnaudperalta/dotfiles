@@ -27,9 +27,6 @@ set noshowmode
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 
-lua << EOF
-require('Comment').setup()
-EOF
 
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
@@ -100,11 +97,8 @@ nnoremap <silent>    <A-l> :BufferNext<CR>
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
 
 " telescope
-nnoremap <space>ff <cmd>Telescope find_files<cr>
-" ripgrep dependency
-nnoremap <space>fb <cmd>Telescope buffers<cr>
-nnoremap <space>fg <cmd>Telescope live_grep<cr> 
-nnoremap <space>fh <cmd>Telescope help_tags<cr>
+nnoremap <space>ff :Telescope git_files hidden=true theme=dropdown<CR>
+nnoremap <space>fg :Telescope live_grep hidden=true theme=dropdown<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
@@ -127,5 +121,10 @@ nmap <space>d <Plug>(easymotion-overwin-f)
 
 "Startup exec
 autocmd User CocNvimInit :CocCommand explorer --position right --no-focus
+
+" Lua config
+lua << EOF
+require('Comment').setup()
+EOF
 
 source ~/.vimrc
