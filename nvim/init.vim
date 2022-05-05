@@ -92,13 +92,14 @@ hi Normal ctermbg=NONE guibg=NONE
 " barbar
 nnoremap <silent>    <A-h> :BufferPrevious<CR>
 nnoremap <silent>    <A-l> :BufferNext<CR>
+nnoremap <silent> <space>w :BufferClose<CR>
 
 " coc
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
 
 " telescope
-nnoremap <space>ff :Telescope git_files hidden=true theme=dropdown<CR>
-nnoremap <space>fg :Telescope live_grep hidden=true theme=dropdown<CR>
+nnoremap <space>ff :Telescope git_files hidden=true <CR>
+nnoremap <space>fg :Telescope live_grep hidden=true <CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
