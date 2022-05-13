@@ -20,6 +20,8 @@ Plug 'puremourning/vimspector'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'numToStr/Comment.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
@@ -96,6 +98,7 @@ nnoremap <silent> <space>w :BufferClose<CR>
 
 " coc
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
+nnoremap <space>i <Cmd>CocCommand editor.action.organizeImport
 
 " telescope
 nnoremap <space>ff :Telescope git_files hidden=true <CR>
@@ -126,6 +129,24 @@ autocmd User CocNvimInit :CocCommand explorer --position right --no-focus
 " Lua config
 lua << EOF
 require('Comment').setup()
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "java" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 EOF
 
 source ~/.vimrc
