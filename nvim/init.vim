@@ -42,6 +42,7 @@ let g:coc_global_extensions = [
     \ 'coc-phpls',
     \ 'coc-java',
     \ 'coc-java-debug'
+    \ 'coc-java-lombok'
 \ ]
 
 let g:copilot_filetypes = {
