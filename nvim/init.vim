@@ -41,7 +41,7 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-phpls',
     \ 'coc-java',
-    \ 'coc-java-debug'
+    \ 'coc-java-debug',
     \ 'coc-java-lombok'
 \ ]
 
