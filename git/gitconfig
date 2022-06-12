@@ -54,3 +54,5 @@
     summary = true
     verbosity = 1
     tool = meld
+[init]
+	defaultBranch = main
