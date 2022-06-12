@@ -7,6 +7,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set number
+set relativenumber
 set gdefault
 set shortmess+=A
 set autoindent
@@ -22,8 +23,7 @@ vnoremap <c-s> <Esc>:w<CR>
 " Ctrl+q to quit tab
 map <C-Q> :bd<CR>
 
-noremap <space>qQ :qa!<CR>
-nnoremap <space>qq :qa<CR>
+nnoremap <space>qq :qa!<CR>
 nnoremap q :q<CR>
 
 " Indentation
