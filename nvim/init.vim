@@ -120,6 +120,7 @@ nnoremap <silent> <space>pf :CocCommand prettier.formatFile<CR>
 nmap <F1> :CocCommand java.debug.vimspector.start<CR>
 nmap <F2> <Plug>VimspectorToggleBreakpoint
 nmap <F3> <Plug>VimspectorContinue
+nmap <F4> :VimspectorReset<CR>
 
 " Easymotion
 map <space>d <Plug>(easymotion-bd-f)
