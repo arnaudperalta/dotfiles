@@ -23,6 +23,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'sirver/ultisnips'
+Plug 'apalmer1377/factorus'
 call plug#end()
 set encoding=UTF-8
 set clipboard+=unnamedplus
