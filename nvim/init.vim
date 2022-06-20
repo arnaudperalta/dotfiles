@@ -122,6 +122,14 @@ nmap <F2> <Plug>VimspectorToggleBreakpoint
 nmap <F3> <Plug>VimspectorContinue
 nmap <F4> :VimspectorReset<CR>
 
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         999,
+  \    'vimspectorBPCond':     999,
+  \    'vimspectorBPLog':      999,
+  \    'vimspectorBPDisabled': 999,
+  \    'vimspectorPC':         999,
+  \ }
+
 " Easymotion
 map <space>d <Plug>(easymotion-bd-f)
 nmap <space>d <Plug>(easymotion-overwin-f)
