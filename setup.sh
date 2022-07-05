@@ -39,3 +39,5 @@ insert_config i3config ~/dotfiles/i3/config ~/.config/i3/config
 insert_config wsli3config ~/dotfiles/i3/wslconfig ~/.config/i3/config
 
 insert_config sshconfig ~/dotfiles/ssh/config ~/.ssh/config
+
+insert_config terminalizer ~/dotfiles/terminalizer/config.yml ~/.terminalizer/config.yml
