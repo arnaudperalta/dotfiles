@@ -1,40 +1,38 @@
 " CocInstall for coc plugins
 call plug#begin()
-Plug 'machakann/vim-sandwich'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'josa42/vim-lightline-coc'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
-Plug 'github/copilot.vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'Yggdroot/indentLine'
-Plug 'APZelos/blamer.nvim'
-Plug 'kdheepak/lazygit.nvim'
-Plug 'easymotion/vim-easymotion'
-Plug 'psliwka/vim-smoothie'
-Plug 'puremourning/vimspector'
-Plug 'airblade/vim-gitgutter'
-Plug 'mhinz/vim-startify'
-Plug 'numToStr/Comment.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround' " Classic surround plugin
+Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Coc
+Plug 'kyazdani42/nvim-web-devicons' " Cool icons
+Plug 'romgrk/barbar.nvim' " Buffer bar
+Plug 'nvim-lua/plenary.nvim' " Telescope dependency
+Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder + grep
+Plug 'Yggdroot/indentLine' " Indention indicators
+Plug 'APZelos/blamer.nvim' " Git blame
+Plug 'kdheepak/lazygit.nvim' " LG integration
+Plug 'easymotion/vim-easymotion' "Easy motion
+Plug 'psliwka/vim-smoothie' " Smooth scrolling
+Plug 'puremourning/vimspector' " Debugger
+Plug 'airblade/vim-gitgutter' " Git line informations
+Plug 'mhinz/vim-startify' " Start menu
+Plug 'numToStr/Comment.nvim' " Comments
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Code parsing
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'apalmer1377/factorus'
+Plug 'apalmer1377/factorus' " Class / Methods refactoring
+Plug 'rafi/awesome-vim-colorschemes' " Colorschemes
 call plug#end()
+
 set encoding=UTF-8
 set clipboard+=unnamedplus
 set noshowmode
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
+colorscheme onedark
 
 
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
 let g:indentLine_leadingSpaceChar = "."
-let g:indentLine_setConceal = 0
+
 let g:blamer_enabled = 1
 
 let g:coc_global_extensions = [
@@ -90,7 +88,6 @@ inoremap <silent><expr> <Tab>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 set termguicolors
-colorscheme gruvbox
 hi Normal ctermbg=NONE guibg=NONE
 
 " barbar
