@@ -13,6 +13,7 @@ set shortmess+=A
 set autoindent
 set cc=100
 set backspace=indent,eol,start
+set noautochdir
 
 " --- Remaps
 " Ctrl+s to save
