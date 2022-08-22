@@ -25,13 +25,11 @@ set encoding=UTF-8
 set clipboard+=unnamedplus
 set noshowmode
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
-set nobackup
-set nowritebackup
-set updatetime=300
 set signcolumn=yes
 let &packpath=&runtimepath
 colorscheme onedark
-
+set termguicolors
+hi Normal ctermbg=NONE guibg=NONE
 
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnable = 1
@@ -39,20 +37,7 @@ let g:indentLine_leadingSpaceChar = "."
 
 let g:blamer_enabled = 1
 
-let g:coc_global_extensions = [
-    \ 'coc-explorer',
-    \ 'coc-rust-analyzer',
-    \ 'coc-phpls',
-    \ 'coc-java',
-    \ 'coc-java-debug',
-    \ 'coc-java-lombok'
-\ ]
-
-let g:copilot_filetypes = {
-        \ 'rs': v:false,
-\ }
-
-" Java Debugger
+" Vimspector
 let g:vimspector_adapters = {
             \ "java-debug-server": {
                 \ "name": "vscode-java",
@@ -77,51 +62,24 @@ let g:vimspector_configurations = {
                 \ }
             \ }
 \ }
+nmap <F1> :CocCommand java.debug.vimspector.start<CR>
+nmap <F2> <Plug>VimspectorToggleBreakpoint
+nmap <F3> <Plug>VimspectorContinue
+nmap <F4> :VimspectorReset<CR>
 
-set termguicolors
-hi Normal ctermbg=NONE guibg=NONE
+let g:vimspector_sign_priority = {
+            \    'vimspectorBP':         999,
+            \    'vimspectorBPCond':     999,
+            \    'vimspectorBPLog':      999,
+            \    'vimspectorBPDisabled': 999,
+            \    'vimspectorPC':         999,
+            \ }
+
 
 " barbar
 nnoremap <silent>    <A-h> :BufferPrevious<CR>
 nnoremap <silent>    <A-l> :BufferNext<CR>
 nnoremap <silent> <space>w :BufferClose<CR>
-
-" coc
-nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>
-nnoremap <space>i <Cmd>CocCommand editor.action.organizeImport
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
 
 " telescope
 nnoremap <space>ff :Telescope git_files hidden=true <CR>
@@ -136,20 +94,6 @@ nnoremap <silent> <space>gg :LazyGit<CR>
 
 " Prettier
 nnoremap <silent> <space>pf :CocCommand prettier.formatFile<CR>
-
-" Vimspector
-nmap <F1> :CocCommand java.debug.vimspector.start<CR>
-nmap <F2> <Plug>VimspectorToggleBreakpoint
-nmap <F3> <Plug>VimspectorContinue
-nmap <F4> :VimspectorReset<CR>
-
-let g:vimspector_sign_priority = {
-  \    'vimspectorBP':         999,
-  \    'vimspectorBPCond':     999,
-  \    'vimspectorBPLog':      999,
-  \    'vimspectorBPDisabled': 999,
-  \    'vimspectorPC':         999,
-  \ }
 
 " Easymotion
 map <space>d <Plug>(easymotion-bd-f)
@@ -198,4 +142,5 @@ require('lualine').setup {
 }
 EOF
 
+source ~/.config/nvim/coc.vim
 source ~/.vimrc
