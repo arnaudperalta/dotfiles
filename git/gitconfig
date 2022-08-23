@@ -1,7 +1,6 @@
 [user]
     name = Arnaud PERALTA
-    email = arnaud.peralta@gmail.com
-	signingkey = 12B89077C68DE7A8
+    email = a.peralta@proxiad.com
 
 [core]
     excludefile = ~/dotfiles/git/gitignore

@@ -2,3 +2,8 @@ Host home
     HostName direct.arnaudperalta.fr
     User arnaud
     Port 42
+
+Host ecp-recette
+    HostName 192.168.1.119
+    User proxiad
+    Port 22

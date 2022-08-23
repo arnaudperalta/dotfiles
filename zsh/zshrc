@@ -35,3 +35,15 @@ stty stop undef
 setopt noflowcontrol
 
 source $ZSH/oh-my-zsh.sh
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+export DISPLAY=192.168.103.29:0
+export LIBGL_ALWAYS_INDIRECT=1
+
+RUNNING=`ps aux | grep dockerd | grep -v grep`
+if [ -z "$RUNNING" ]; then
+  sudo dockerd > /dev/null 2>&1 &
+  disown
+fi
