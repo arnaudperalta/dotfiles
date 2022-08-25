@@ -28,6 +28,7 @@ alias ix="curl -F 'f:1=<-' ix.io"
 alias lg="lazygit"
 alias grbr="gradle bootRun"
 alias grbrd="gradle bootRun --debug-jvm"
+alias del="trash"
 
 # enable control-s and control-q
 stty start undef

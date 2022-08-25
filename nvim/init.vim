@@ -36,6 +36,7 @@ let g:indentLine_leadingSpaceEnable = 1
 let g:indentLine_leadingSpaceChar = "."
 
 let g:blamer_enabled = 1
+let g:startify_change_to_dir = 0
 
 " Vimspector
 let g:vimspector_adapters = {
