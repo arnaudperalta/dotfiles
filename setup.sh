@@ -19,8 +19,11 @@ insert_config() {
 }
 
 mkdir -p ~/.config/nvim/colors
+mkdir -p ~/.config/lazygit
 insert_config .zshrc ~/dotfiles/zsh/zshrc ~/.zshrc
+
 insert_config .gitconfig ~/dotfiles/git/gitconfig ~/.gitconfig
+insert_config lazygit.yml ~/dotfiles/git/lazygit.yml ~/.config/lazygit/config.yml
 
 insert_config .tmux.conf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 insert_config .tmux.conf.local ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
