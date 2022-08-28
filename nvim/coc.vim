@@ -5,10 +5,10 @@ set updatetime=300
 let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-rust-analyzer',
-    \ 'coc-phpls',
     \ 'coc-java',
     \ 'coc-java-debug',
-    \ 'coc-java-lombok'
+    \ 'coc-java-lombok',
+    \ 'coc-metals'
 \ ]
 
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>

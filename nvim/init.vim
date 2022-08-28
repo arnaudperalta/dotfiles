@@ -19,7 +19,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Code parsing
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'apalmer1377/factorus' " Class / Methods refactoring
 Plug 'rafi/awesome-vim-colorschemes' " Colorschemes
-Plug 'scalameta/nvim-metals'
 call plug#end()
 
 set encoding=UTF-8
@@ -142,24 +141,6 @@ require('lualine').setup {
   tabline = {},
   extensions = {}
 }
--- Scala Metals
-vim.opt_global.shortmess:remove("F")
-local metals_config = require("metals").bare_config()
-local api = vim.api
-local cmd = vim.cmd
-metals_config.settings = {
-  showImplicitArguments = true
-}
-metals_config.init_options.statusBarProvider = "on"
-
-local nvim_metals_group = api.nvim_create_augroup("nvim-metals", { clear = true })
-api.nvim_create_autocmd("FileType", {
-  pattern = { "scala", "sbt" },
-  callback = function()
-    require("metals").initialize_or_attach(metals_config)
-  end,
-  group = nvim_metals_group,
-})
 EOF
 
 source ~/.config/nvim/coc.vim
