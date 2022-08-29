@@ -7,6 +7,8 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-java',
     \ 'coc-java-debug',
+    \ 'coc-java-lombok',
+    \ 'coc-metals'
 \ ]
 
 nmap <space>e <Cmd>CocCommand explorer --focus --position right<CR>

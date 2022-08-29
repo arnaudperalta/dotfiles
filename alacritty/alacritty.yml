@@ -12,19 +12,18 @@ window:
 
 font:
   normal:
-    family: Hack Nerd Font
+    family: Noto Sans Mono Nerd Font
     style: Regular
 
   bold:
-    family: Hack Nerd Font
+    family: Noto Sans Mono Nerd Font
     style: Bold
 
   italic:
-    family: Hack Nerd Font
+    family: noto Sans Mono Nerd Font
     style: Italic
 
-  # font size
-  size: 10
+  size: 10.5
 
 scrolling:
   history: 9000
@@ -53,4 +52,4 @@ shell:
   args:
     - -l
     - -c
-    - "tmux"
+    - "tmux attach || tmux"
