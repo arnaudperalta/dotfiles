@@ -38,45 +38,6 @@ let g:indentLine_leadingSpaceChar = "."
 let g:blamer_enabled = 1
 let g:startify_change_to_dir = 0
 
-" Vimspector
-let g:vimspector_adapters = {
-            \ "java-debug-server": {
-                \ "name": "vscode-java",
-                \ "port": "${AdapterPort}"
-            \ }
-\ }
-
-let g:vimspector_configurations = {
-            \ "Java Attach": {
-                \ "default": "true",
-                \ "adapter": "java-debug-server",
-                \ "configuration": {
-                    \ "request": "attach",
-                    \ "host": "127.0.0.1",
-                    \ "port": "5005"
-                \ },
-                \ "breakpoints": {
-                    \ "exception": {
-                        \ "caught": "N",
-                        \ "uncaught": "N"
-                    \ }
-                \ }
-            \ }
-\ }
-nmap <F1> :CocCommand java.debug.vimspector.start<CR>
-nmap <F2> <Plug>VimspectorToggleBreakpoint
-nmap <F3> <Plug>VimspectorContinue
-nmap <F4> :VimspectorReset<CR>
-
-let g:vimspector_sign_priority = {
-            \    'vimspectorBP':         999,
-            \    'vimspectorBPCond':     999,
-            \    'vimspectorBPLog':      999,
-            \    'vimspectorBPDisabled': 999,
-            \    'vimspectorPC':         999,
-            \ }
-
-
 " barbar
 nnoremap <silent>    <A-h> :BufferPrevious<CR>
 nnoremap <silent>    <A-l> :BufferNext<CR>
