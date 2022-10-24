@@ -3,8 +3,6 @@ window:
     columns: 120
     lines: 30
 
-  decorations: full
-
   dynamic_title: true
   padding:
     x: 2
@@ -12,16 +10,16 @@ window:
 
 font:
   normal:
-    family: Noto Sans Mono Nerd Font
-    style: Regular
+    family: Noto Mono Nerd Font Mono
+    style: Book
+
+  normal:
+    family: Noto Mono Nerd Font Mono
+    style: Book
 
   bold:
-    family: Noto Sans Mono Nerd Font
+    family: Noto Mono Nerd Font Mono
     style: Bold
-
-  italic:
-    family: noto Sans Mono Nerd Font
-    style: Italic
 
   size: 10.5
 

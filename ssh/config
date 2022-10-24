@@ -8,6 +8,14 @@ Host ecp-recette
   User proxiad
   Port 22
 
+Host ecp-production
+  HostName prod-front.ccilehavre.over-link.com
+  User proxiad
+
+Host ecp-preproduction
+  HostName s1-test.ccilehavre.over-link.com
+  User proxiad
+
 Host proxitime-recette
   HostName 192.168.1.124
   User proxiad
@@ -17,3 +25,7 @@ Host proxitime-production
   HostName 192.168.1.91
   User proxiad
   Port 22
+
+Host pronos
+  HostName 192.168.100.106
+  User proxiad
