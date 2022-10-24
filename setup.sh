@@ -35,3 +35,9 @@ insert_config sshconfig ~/dotfiles/ssh/config ~/.ssh/config
 # Tmux install
 git clone https://github.com/wfxr/tmux-power tmux/tmux-power
 insert_config .tmux.conf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+# Emacs
+mkdir -p ~/.doom.d
+insert_config config.el ~/dotfiles/doom/config.el ~/.doom.d/config.el
+insert_config init.el ~/dotfiles/doom/init.el ~/.doom.d/init.el
+insert_config packages.el ~/dotfiles/doom/packages.el ~/.doom.d/packages.el
