@@ -1,7 +1,7 @@
 " CocInstall for coc plugins
 call plug#begin()
 Plug 'tpope/vim-surround' " Classic surround plugin
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kyazdani42/nvim-web-devicons' " Cool icons
 Plug 'romgrk/barbar.nvim' " Buffer bar
 Plug 'nvim-lua/plenary.nvim' " Telescope dependency
