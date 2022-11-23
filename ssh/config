@@ -4,7 +4,7 @@ Host home
   Port 42
 
 Host ecp-recette
-  HostName 192.168.1.119
+  HostName 192.168.1.181
   User proxiad
   Port 22
 
@@ -28,4 +28,8 @@ Host proxitime-production
 
 Host pronos
   HostName 192.168.100.106
+  User proxiad
+
+Host reverse-proxy
+  HostName 192.168.1.10
   User proxiad
