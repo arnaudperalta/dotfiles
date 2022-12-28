@@ -5,21 +5,21 @@ window:
 
   dynamic_title: true
   padding:
-    x: 2
-    y: 0
+    x: 0
+    y: 9
 
 font:
   normal:
-    family: Noto Mono Nerd Font Mono
-    style: Book
-
-  normal:
-    family: Noto Mono Nerd Font Mono
-    style: Book
+    family: NotoSansMono Nerd Font
+    style: Regular
 
   bold:
-    family: Noto Mono Nerd Font Mono
+    family: Noto Sans Mono Nerd Font
     style: Bold
+
+  italic:
+    family: noto Sans Mono Nerd Font
+    style: Italic
 
   size: 10.5
 

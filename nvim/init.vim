@@ -46,7 +46,7 @@ nnoremap <silent> <space>w :BufferClose<CR>
 
 " telescope
 nnoremap <space>ff :Telescope git_files hidden=true <CR>
-nnoremap <space>fg :Telescope live_grep hidden=true <CR>
+nnoremap <space>fg :Telescope live_grep <CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
@@ -102,6 +102,15 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {}
+}
+require('telescope').setup {
+  pickers = {
+    live_grep = {
+      additional_args = function(opts)
+        return {"--hidden"}
+      end
+    },
+  },
 }
 EOF
 
