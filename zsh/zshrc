@@ -13,8 +13,8 @@ alias mcis="mvn clean install -DskipTests"
 alias mt="mvn test"
 alias mtd="mvn -Dmaven.surefire.debug test"
 alias gdh="git diff HEAD"
-alias dcu="docker-compose up"
-alias dcud="docker-compose up -d"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
 alias ix="curl -F 'f:1=<-' ix.io"
 alias lg="lazygit"
 alias grbr="gradle bootRun"
@@ -32,3 +32,5 @@ plugins=(
 ZSH_THEME="robbyrussell"
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

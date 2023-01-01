@@ -3,8 +3,6 @@ window:
     columns: 120
     lines: 30
 
-  decorations: full
-
   dynamic_title: true
   padding:
     x: 2
@@ -23,7 +21,7 @@ font:
     family: noto Sans Mono Nerd Font Mono
     style: Italic
 
-  size: 12
+  size: 10
 
 scrolling:
   history: 9000
