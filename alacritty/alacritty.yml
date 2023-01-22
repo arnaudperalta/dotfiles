@@ -21,7 +21,7 @@ font:
     family: noto Sans Mono Nerd Font Mono
     style: Italic
 
-  size: 10
+  size: 11
 
 scrolling:
   history: 9000
