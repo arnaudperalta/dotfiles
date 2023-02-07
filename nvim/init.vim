@@ -57,6 +57,7 @@ nnoremap <silent> <space>gg :LazyGit<CR>
 
 " Prettier
 nnoremap <silent> <space>pf :CocCommand prettier.formatFile<CR>
+nnoremap <silent> <space>pe :CocCommand eslint.executeAutofix<CR>
 
 " Easymotion
 map <space>d <Plug>(easymotion-bd-f)
