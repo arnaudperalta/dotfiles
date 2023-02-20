@@ -12,7 +12,6 @@ set autoindent
 set cc=100
 set backspace=indent,eol,start
 set noautochdir
-colorscheme onedark
 
 " --- Remaps
 " Ctrl+s to save

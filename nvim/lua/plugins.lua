@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -33,4 +31,6 @@ return require('packer').startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
   use 'kdheepak/lazygit.nvim'
+  use 'lewis6991/gitsigns.nvim'
+  use 'f-person/git-blame.nvim'
 end)
