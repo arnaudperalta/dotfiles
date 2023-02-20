@@ -2,8 +2,6 @@
 set nocompatible
 syntax enable
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
 set expandtab
 set mouse=a
 set number
@@ -14,6 +12,7 @@ set autoindent
 set cc=100
 set backspace=indent,eol,start
 set noautochdir
+colorscheme onedark
 
 " --- Remaps
 " Ctrl+s to save
@@ -54,30 +53,6 @@ nnoremap <space>s :vsp<CR>
 
 "Remove hightlights
 nnoremap <space>h :noh<CR>
-
-"auto close {
-function! s:CloseBracket()
-    return "{\<Enter>}\<Esc>O"
-endfunction
-
-function! s:CloseSBracket()
-    return "[\<Enter>]\<Esc>O"
-endfunction
-
-function! s:ClosePar()
-    return "(\<Enter>)\<Esc>O"
-endfunction
-
-inoremap <expr> {<Enter> <SID>CloseBracket()
-inoremap <expr> [<Enter> <SID>CloseSBracket()
-inoremap <expr> (<Enter> <SID>ClosePar()
-
-" Vim hardmode !
-for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-  exec 'noremap' key '<Nop>'
-  exec 'inoremap' key '<Nop>'
-  exec 'cnoremap' key '<Nop>'
-endfor
 
 " Upload visual selection to ix.io
 vnoremap <space>u :w !curl -F "f:1=<-" ix.io<CR>

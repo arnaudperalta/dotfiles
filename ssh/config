@@ -2,3 +2,7 @@ Host home
     HostName direct.arnaudperalta.fr
     User arnaud
     Port 42
+
+Host qore
+    HostName 213.239.210.51
+    User root
