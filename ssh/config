@@ -1,35 +1,8 @@
 Host home
-  HostName direct.arnaudperalta.fr
-  User arnaud
-  Port 42
+    HostName direct.arnaudperalta.fr
+    User arnaud
+    Port 42
 
-Host ecp-recette
-  HostName 192.168.1.181
-  User proxiad
-  Port 22
-
-Host ecp-production
-  HostName prod-front.ccilehavre.over-link.com
-  User proxiad
-
-Host ecp-preproduction
-  HostName s1-test.ccilehavre.over-link.com
-  User proxiad
-
-Host proxitime-recette
-  HostName 192.168.1.124
-  User proxiad
-  Port 22
-
-Host proxitime-production
-  HostName 192.168.1.91
-  User proxiad
-  Port 22
-
-Host pronos
-  HostName 192.168.100.106
-  User proxiad
-
-Host reverse-proxy
-  HostName 192.168.1.10
-  User proxiad
+Host qore
+    HostName 213.239.210.51
+    User root
