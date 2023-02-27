@@ -33,4 +33,8 @@ return require('packer').startup(function(use)
   use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'f-person/git-blame.nvim'
+  use {
+    'nmac427/guess-indent.nvim',
+    config = function() require('guess-indent').setup {} end,
+  }
 end)

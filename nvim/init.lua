@@ -45,8 +45,8 @@ require'lspconfig'.tsserver.setup {}
 
 vim.api.nvim_set_keymap('n', '<space>ff', ':Telescope git_files hidden=true <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>fg', ':Telescope live_grep hidden=true <CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<space>w', ':bd <CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<space>e', ':NvimTreeToggle <CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>w', ':bp|bd #<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>e', ':NvimTreeFindFileToggle <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>gg', ':LazyGit <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-h>', ':bpre <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-l>', ':bnext <CR>', { noremap = true, silent = true })
