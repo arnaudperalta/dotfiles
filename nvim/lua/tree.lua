@@ -12,6 +12,7 @@ require("nvim-tree").setup({
     mappings = {
       list = {
         { key = "l", action = "open" },
+        { key = "h", action = "open" },
       },
     },
     side = "right"
@@ -19,4 +20,14 @@ require("nvim-tree").setup({
   renderer = {
     group_empty = true,
   },
+  filters = {
+    dotfiles = false,
+    custom = { '^.git$' }
+  },
+  diagnostics = {
+    enable = true
+  },
+  git = {
+    ignore = false
+  }
 })

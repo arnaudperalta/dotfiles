@@ -55,5 +55,7 @@ vim.api.nvim_command([[
         autocmd colorscheme * :hi normal guibg=#1D1F21
     augroup END
 ]])
+vim.api.nvim_set_keymap('i', '<Tab>',   [[pumvisible() ? "\<C-n>" : "\<Tab>"]],   { noremap = true, expr = true })
+vim.api.nvim_set_keymap('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
 vim.o.termguicolors = true
 vim.cmd('colorscheme onedark')
