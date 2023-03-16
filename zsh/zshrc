@@ -38,3 +38,5 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.gcloud-credentials
+
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"

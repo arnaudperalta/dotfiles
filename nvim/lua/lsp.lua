@@ -48,3 +48,5 @@ require('lspconfig')['eslint'].setup{
     })
   end,
 }
+
+require'lspconfig'.graphql.setup{}
