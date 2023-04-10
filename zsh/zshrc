@@ -21,6 +21,8 @@ alias lg="lazygit"
 alias grbr="gradle bootRun"
 alias grbrd="gradle bootRun --debug-jvm"
 alias del="trash"
+alias y="yarn"
+alias pn="pnpm"
 
 # enable control-s and control-q
 stty start undef

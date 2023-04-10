@@ -35,18 +35,14 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require'lspconfig'.tsserver.setup {
+  capabilities = capabilities
+}
 require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-}
-
-require('lspconfig')['eslint'].setup{
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = bufnr,
-      command = "EslintFixAll",
-    })
-  end,
+    capabilities = capabilities
 }
 
 require'lspconfig'.graphql.setup{}
