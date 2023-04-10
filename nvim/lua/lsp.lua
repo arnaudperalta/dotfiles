@@ -46,3 +46,6 @@ require('lspconfig')['tsserver'].setup{
 }
 
 require'lspconfig'.graphql.setup{}
+require'lspconfig'.gopls.setup{
+  capabilities = capabilities
+}

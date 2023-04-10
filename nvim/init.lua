@@ -42,8 +42,103 @@ require('mini.move').setup()
 require('gitsigns').setup {
   current_line_blame = true
 }
+
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "go", "rust", "graphql", "typescript" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = { },
+
+  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+  highlight = {
+    enable = true,
+    disable = { },
+    additional_vim_regex_highlighting = false,
+  },
+}
+
 local cmp = require('cmp')
+local icons = {
+  Array = '  ',
+  Boolean = '  ',
+  Class = '  ',
+  Color = '  ',
+  Constant = '  ',
+  Constructor = '  ',
+  Enum = '  ',
+  EnumMember = '  ',
+  Event = '  ',
+  Field = '  ',
+  File = '  ',
+  Folder = '  ',
+  Function = '  ',
+  Interface = '  ',
+  Key = '  ',
+  Keyword = '  ',
+  Method = '  ',
+  Module = '  ',
+  Namespace = '  ',
+  Null = ' ﳠ ',
+  Number = '  ',
+  Object = '  ',
+  Operator = '  ',
+  Package = '  ',
+  Property = '  ',
+  Reference = '  ',
+  Snippet = '  ',
+  String = '  ',
+  Struct = '  ',
+  Text = '  ',
+  TypeParameter = '  ',
+  Unit = '  ',
+  Value = '  ',
+  Variable = '  ',
+}
+
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+    end,
+  },
+  formatting = {
+    fields = { 'kind', 'abbr', 'menu' },
+    format = function(entry, item)
+      item.kind = string.format('%s', icons[item.kind])
+      item.menu = ({
+        buffer = '[Buffer]',
+        luasnip = '[Snip]',
+        nvim_lsp = '[LSP]',
+        nvim_lua = '[API]',
+        path = '[Path]',
+        rg = '[RG]',
+      })[entry.source.name]
+      return item
+    end,
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
   }, {
@@ -78,8 +173,10 @@ cmp.setup.cmdline(':', {
   })
 })
 
+-- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require'lspconfig'.tsserver.setup {
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig').gopls.setup {
   capabilities = capabilities
 }
 
@@ -91,12 +188,10 @@ vim.api.nvim_set_keymap('n', '<space>gg', ':LazyGit <CR>', { noremap = true, sil
 vim.api.nvim_set_keymap('n', '<M-h>', ':bpre <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-l>', ':bnext <CR>', { noremap = true, silent = true })
 vim.api.nvim_command([[
-    augroup ChangeBackgroudColour
-        autocmd colorscheme * :hi normal guibg=#1D1F21
-    augroup END
+augroup ChangeBackgroudColour
+autocmd colorscheme * :hi normal guibg=#1D1F21
+augroup END
 ]])
-vim.api.nvim_set_keymap('i', '<Tab>',   [[pumvisible() ? "\<C-n>" : "\<Tab>"]],   { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
 local keys = {
   ['cr']        = vim.api.nvim_replace_termcodes('<CR>', true, true, true),
   ['ctrl-y']    = vim.api.nvim_replace_termcodes('<C-y>', true, true, true),
