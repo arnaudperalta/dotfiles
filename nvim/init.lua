@@ -189,7 +189,6 @@ vim.api.nvim_set_keymap('n', '<M-h>', ':bpre <CR>', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<M-l>', ':bnext <CR>', { noremap = true, silent = true })
 vim.api.nvim_command([[
 augroup ChangeBackgroudColour
-autocmd colorscheme * :hi normal guibg=#1D1F21
 augroup END
 ]])
 local keys = {
@@ -211,4 +210,49 @@ _G.cr_action = function()
 end
 vim.api.nvim_set_keymap('i', '<CR>', 'v:lua._G.cr_action()', { noremap = true, expr = true })
 vim.o.termguicolors = true
-vim.cmd('colorscheme onedark')
+require("catppuccin").setup({
+    flavour = "latte", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = true,
+    show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+    term_colors = false,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        notify = false,
+        mini = false,
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+})
+
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
