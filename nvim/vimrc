@@ -50,11 +50,10 @@ vnoremap <M-k> :m '<-2<CR>gv=gv
 "Split buffers
 nnoremap <space>s :vsp<CR>
 
-"Remove hightlights
-nnoremap <space>h :noh<CR>
-
 " Upload visual selection to ix.io
 vnoremap <space>u :w !curl -F "f:1=<-" ix.io<CR>
+
+nnoremap <esc> :noh<CR>
 
 set t_fd=
 set t_fe=
