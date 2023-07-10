@@ -1,2 +1,7 @@
 git:
   autoFetch: false
+gui:
+  theme:
+    nerdFontsVersion: "3"
+    defaultFgColor:
+      - black
